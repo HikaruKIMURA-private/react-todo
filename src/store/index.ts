@@ -7,13 +7,13 @@ type EditedTask = {
 
 type State = {
     editedTask: EditedTask
-    updatedEditedTask: (payload: EditedTask) => void
+    updateEditedTask: (payload: EditedTask) => void
     resetEditedTask: () => void
 }
 
 const useStore = create<State>((set) => ({
     editedTask: {id: 0, title: '' },
-    updatedEditedTask: (payload) =>
+    updateEditedTask: (payload) =>
         set({
             editedTask: payload,
         }),
